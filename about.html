@@ -5,22 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="bpaas-design-system" content="brutalist-avantgarde">
     <meta name="bpaas-design-theme" content="kr-neon-void">
-    <title>대전 쇼핑몰 제작 전문 | 정보 및 프로세스</title>
-    <meta name="description" content="대전 쇼핑몰 제작 전문 업체입니다. 오픈마켓부터 자체 구축까지. 대전 유성구의 작은 카페 사장님부터 대덕 구의 공장 대표님까지, 실패 없는 온라인 사업 시작을 돕습니다.">
-    <meta name="keywords" content="대전 쇼핑몰 제작, 쇼핑몰 제작 전문, 대전 쇼핑몰, 스마트스토어 오픈, 와디즈 펀딩">
-    <link rel="canonical" href="https://kr-pbn-bp-014.pages.dev">
-    <meta property="og:title" content="대전 쇼핑몰 제작 전문 | 정보 및 프로세스">
-    <meta property="og:description" content="대전 쇼핑몰 제작 전문 업체입니다. 오픈마켓부터 자체 구축까지. 대전 유성구의 작은 카페 사장님부터 대덕 구의 공장 대표님까지, 실패 없는 온라인 사업 시작을 돕습니다.">
-    <meta property="og:url" content="https://kr-pbn-bp-014.pages.dev">
+    <meta name="robots" content="index, follow">
+    <title>대전 쇼핑몰 제작 전문 | 스트리트 감성으로 승부하다</title>
+    <meta name="description" content="대전 쇼핑몰 제작 전문, 그냥 예쁜 게 아니라 팔리는 게 중요합니다. 스트리트 브루탈리즘 디자인과 강력한 퍼포먼스로 당신의 온라인 비즈니스를 완성하세요.">
+    <meta name="keywords" content="대전 쇼핑몰 제작 전문, 쇼핑몰 호스팅, 디자인 에이전시, 스트리트 디자인, 오픈마켓 연동, 대전 웹개발, 스마트스토어 연동">
+    <link rel="canonical" href="https://kr-pbn-bp-014.pages.dev/blog">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="대전 쇼핑몰 제작 전문 | 스트리트 감성으로 승부">
+    <meta property="og:description" content="단순한 쇼핑몰이 아닙니다. 당신의 브랜드 아이덴티티를 입힌 스트리트 감성 커머스 솔루션입니다.">
+    <meta property="og:url" content="https://kr-pbn-bp-014.pages.dev/blog">
+    <meta property="og:image" content="https://kr-pbn-bp-014.pages.dev/assets/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="대전 쇼핑몰 제작 전문">
+    <meta name="twitter:description" content="팔리는 디자인, 튼튼한 코드로 대전 지역 기반 온라인 샵을 구축합니다.">
+    
     <style>
+        /* CORE RESET & VARIABLES */
         :root {
             --bg-color: #0a0a0a;
             --text-main: #f0f0f0;
-            --accent-neon: #ccff00;
-            --accent-pink: #ff0055;
-            --border-thick: 3px solid #f0f0f0;
-            --border-thin: 1px solid #333;
-            --font-stack: 'Courier New', Courier, monospace;
+            --text-muted: #888;
+            --accent-green: #39ff14;
+            --accent-pink: #ff0090;
+            --border-color: #333;
+            --grid-line: rgba(255, 255, 255, 0.05);
+            --font-display: 'Impact', 'Arial Black', sans-serif;
+            --font-body: 'Courier New', monospace;
         }
 
         * {
@@ -29,284 +43,332 @@
             padding: 0;
         }
 
-        body {
+        html, body {
             background-color: var(--bg-color);
             color: var(--text-main);
-            font-family: var(--font-stack);
+            font-family: var(--font-body);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            border-left: var(--border-thin);
-            border-right: var(--border-thin);
-            min-height: 100vh;
+        a {
+            color: var(--text-main);
+            text-decoration: none;
+            transition: color 0.2s;
         }
 
-        .header {
-            padding: 40px 0;
-            border-bottom: var(--border-thick);
+        a:hover {
+            color: var(--accent-green);
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 10vw, 8rem);
+            color: var(--text-main);
+            text-shadow: 4px 4px 0px var(--accent-pink);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            border-bottom: 4px solid var(--accent-green);
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--accent-green);
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            max-width: 65ch;
+        }
+
+        /* UTILITIES */
+        .highlight {
+            background-color: var(--accent-green);
+            color: var(--bg-color);
+            padding: 2px 5px;
+            font-weight: bold;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .flex {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
             flex-wrap: wrap;
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: -1px;
-            color: var(--accent-neon);
-            text-shadow: 2px 2px 0px var(--accent-pink);
-        }
-
-        .nav ul {
-            display: flex;
-            list-style: none;
+        .grid {
+            display: grid;
             gap: 20px;
         }
 
-        .nav a {
-            color: var(--text-main);
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            padding: 5px 10px;
-            border: 1px solid transparent;
-            transition: all 0.2s;
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-left: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
+            linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+            background-size: 40px 40px;
+            min-height: 100vh;
         }
 
-        .nav a:hover {
-            border-color: var(--accent-neon);
-            background-color: var(--accent-neon);
-            color: #000;
-        }
-
-        .hero {
-            padding: 80px 0;
-            border-bottom: var(--border-thick);
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            line-height: 1;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        .hero .subtitle {
-            font-size: 1.2rem;
-            max-width: 600px;
-            background: #fff;
-            color: #000;
-            padding: 10px;
+        /* COMPONENTS */
+        .btn {
             display: inline-block;
-            margin-top: 20px;
-            font-weight: bold;
+            background: transparent;
+            border: 2px solid var(--accent-green);
+            color: var(--accent-green);
+            padding: 15px 30px;
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s;
         }
 
-        .content-section {
-            padding: 60px 0;
-            border-bottom: var(--border-thin);
-        }
-
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
+        .btn:hover {
+            background: var(--accent-green);
+            color: var(--bg-color);
+            box-shadow: 5px 5px 0px var(--text-main);
+            transform: translate(-2px, -2px);
+            text-decoration: none;
         }
 
         .card {
-            border: var(--border-thick);
+            border: 2px solid var(--border-color);
             padding: 30px;
-            background: #111;
-            position: relative;
+            background: rgba(0,0,0,0.8);
+            transition: transform 0.2s;
         }
 
         .card:hover {
-            transform: translate(-5px, -5px);
-            box-shadow: 5px 5px 0px var(--accent-neon);
+            border-color: var(--accent-pink);
+            transform: scale(1.02);
         }
 
-        .card h3 {
+        .marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            background: var(--accent-pink);
+            color: var(--bg-color);
+            padding: 10px 0;
+            font-family: var(--font-display);
             font-size: 1.5rem;
-            margin-bottom: 15px;
+            margin-bottom: 40px;
+        }
+
+        /* NAVIGATION */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 2px solid var(--text-main);
+            margin-bottom: 50px;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-style: italic;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        /* FAQ STYLE */
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+        }
+        .faq-q {
+            font-weight: bold;
             color: var(--accent-pink);
-            text-transform: uppercase;
-            border-bottom: 1px dashed #333;
-            padding-bottom: 10px;
+            margin-bottom: 10px;
+            display: block;
         }
 
-        .step-list {
-            counter-reset: step;
-            list-style: none;
-        }
-
-        .step-list li {
-            position: relative;
-            padding-left: 40px;
-            margin-bottom: 20px;
-        }
-
-        .step-list li::before {
-            counter-increment: step;
-            content: "0" counter(step);
-            position: absolute;
-            left: 0;
-            top: 0;
-            font-weight: bold;
-            color: var(--accent-neon);
-            font-size: 1.2rem;
-        }
-
-        .info-block {
-            background: #fff;
-            color: #000;
-            padding: 20px;
-            margin-top: 10px;
-            font-weight: bold;
-            border: 2px solid #000;
-            box-shadow: 4px 4px 0px var(--accent-pink);
-        }
-
-        .footer {
-            padding: 40px 0;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            background: var(--accent-neon);
-            color: #000;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            border: 2px solid #000;
-            box-shadow: 4px 4px 0px #fff;
-            transition: all 0.2s;
-        }
-
-        .cta-button:hover {
-            box-shadow: 2px 2px 0px #fff;
-            transform: translate(2px, 2px);
-        }
-
+        /* RESPONSIVE */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--bg-color);
+                border-bottom: 2px solid var(--accent-green);
+                padding: 20px;
             }
-            .grid-2 {
+            .nav-links.active {
+                display: flex;
+            }
+            .hamburger {
+                display: block;
+            }
+            h1 {
+                text-shadow: 2px 2px 0px var(--accent-pink);
+            }
+            .grid-3 {
                 grid-template-columns: 1fr;
-            }
-            .header {
-                flex-direction: column;
-                gap: 20px;
-                text-align: center;
-            }
-            .nav ul {
-                flex-direction: column;
-                gap: 10px;
             }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header class="header">
-        <div class="logo">Daejeon // Web_Builder</div>
-        <nav class="nav">
-            <ul>
-                <li><a href="#">홈</a></li>
-                <li><a href="#">제작사례</a></li>
-                <li><a href="#">정보</a></li>
-                <li><a href="#">문의</a></li>
-                <li><a href="tel:010-6279-0862">Call: 010-6279-0862</a></li>
-            </ul>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">DAEJEON_SHOP_MAKER<span style="color:var(--accent-green)">.KR</span></div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <div class="nav-links" id="navLinks">
+                <a href="#" class="nav-item">홈</a>
+                <a href="#" class="nav-item">포트폴리오</a>
+                <a href="#" class="nav-item">제작 프로세스</a>
+                <a href="#" class="nav-item">가격 정책</a>
+                <a href="tel:042-000-0000" class="nav-item highlight">042-000-0000</a>
+            </div>
         </nav>
-    </header>
 
-    <section class="hero">
-        <h1>쇼핑몰 제작의<br>진짜 비밀을 알려드릴게요.</h1>
-        <div class="subtitle">
-            "대전에 계신 사장님들, 이제부터는 제가 온라인 영업부 팀장입니다."
+        <!-- Marquee -->
+        <div class="marquee">
+            <marquee scrollamount="10">
+                대전 쇼핑몰 제작 전문 + 스트리트 브루탈리즘 디자인 + 오픈마켓 연동 + SEO 최적화 + 모바일 퍼스트 + 밤새 작업하는 개발자 + 
+            </marquee>
         </div>
-    </section>
 
-    <section class="content-section">
-        <div class="grid-2">
-            <div class="card">
-                <h3>01. 왜 '대전' 쇼핑몰이어야 할까요?</h3>
-                <p style="margin-bottom: 20px;">
-                    솔직히 말해볼게요. 서울의 유명 에이전시에게 맡기면 좋긴 합니다. 근데, 제품에 문제가 생겼거나 급하게 수정할 게 생겼을 때, "담당자가 회의 중이라..." 이런 답변만 기다리다 속 터진 경험 있으시죠?
-                </p>
-                <p>
-                    우리는 대전 현지에서 숨 쉬고 있습니다. 유성구의 공부를 찾아가기도 하고, 중구의 도매상가를 누비기도 합니다. <strong>대전 쇼핑몰 제작 전문</strong>이라는 건 단순히 지역 이름이 아니라, 언제든 달려갈 수 있다는 약속입니다.
-                </p>
+        <!-- Hero Section -->
+        <header style="padding: 50px 0;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap;">
+                <div>
+                    <p style="color: var(--accent-pink); font-weight: bold;">// REGION: DAEJEON</p>
+                    <h1>대전의 밤을<br>새우며 만드는<br><span style="color: var(--accent-green)">팔리는 쇼핑몰</span></h1>
+                </div>
+                <div class="text-right">
+                    <p>단순 코딩이 아님.<br>당신의 브랜드를 입히는<br>디지털 아트워크.</p>
+                    <br>
+                    <a href="#contact" class="btn">무료 견적 받기</a>
+                </div>
             </div>
-            <div class="card">
-                <h3>02. 우리가 하는 일 (현실 버전)</h3>
-                <ul class="step-list">
-                    <li>
-                        <strong>기획:</strong> 사장님의 구상, 다 맞습니다. 근데 그게 팔릴지 안 팔릴지는 우리가 검증해 드릴게요. 뜬구름 잡는 기획 말고, 통장 잔고가 늘어나는 기획을 합니다.
-                    </li>
-                    <li>
-                        <strong>디자인:</strong> 예쁘기만 한 사이트? 그거 돈만 날립니다. 클릭을 유도하고, 장바구니 담게 만들고, 결제하게 만드는 '욕심쟁이' 디자인을 합니다.
-                    </li>
-                    <li>
-                        <strong>마케팅 지원:</strong> 사이트 만들고 끝? 아뇨. 스마트스토어 등록부터 네이버 검색 노출 꿀팁까지, 초기 세팅 끝까지 밀착 지원해 드려요.
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        </header>
 
-    <section class="content-section">
-        <h2 style="font-size: 2rem; margin-bottom: 30px; text-transform: uppercase;">자주 묻는 질문 (솔직 버전)</h2>
-        
-        <div class="grid-2">
-            <div class="info-block">
-                <p><strong>Q. 예산이 얼마인가요?</strong></p>
-                <p style="margin-top: 10px;">A. "몇 천만 원" 따위의 말은 안 합니다. 사장님의 현재 사업 단계에 맞춰서, <strong>가장 효율적인 비용</strong>으로 시작합니다. 무조건 비싼 게 좋은 게 아닙니다. 필요 없는 기능 빼고, 핵심에 투자하세요.</p>
-            </div>
-            <div class="info-block">
-                <p><strong>Q. 제가 IT 지식이 없는데도 되나요?</strong></p>
-                <p style="margin-top: 10px;">A. 마우스 클릭만 할 줄 아시면 됩니다. 관리 페이지 사용법부터 사진 등록, 상품 수정까지, 동화책 읽어주듯이 알려드립니다. 저희가 만든 사이트는 사장님이 직접 운영하기 편하게 만들거든요.</p>
-            </div>
-            <div class="info-block">
-                <p><strong>Q. 제작 기간은 얼마나 걸리나요?</strong></p>
-                <p style="margin-top: 10px;">A. 보통 2~3 주 정도 걸립니다. 하지만 급하다?没关系 (괜찮아요). 최대한 빠르게 오픈해서 매출을 내는 게 우선이니까요. 단계별로 오픈하는 전략도 괜찮습니다.</p>
-            </div>
-            <div class="info-block">
-                <p><strong>Q. 사후 관리 (AS) 는?</strong></p>
-                <p style="margin-top: 10px;">A. 사이트가 깨지거나 버그가 생기면, 저희가 먼저 연락드립니다. 금요일 저녁에 서버가 터져도 저희가 지킵니다. 대전 전역, 24 시간 대응 태세입니다.</p>
-            </div>
-        </div>
-    </section>
+        <!-- Main Content: Regional Info -->
+        <section style="margin-top: 80px;">
+            <div class="grid" style="grid-template-columns: 2fr 1fr; gap: 40px;">
+                <article>
+                    <h2>왜 대전인가?</h2>
+                    <p>안녕하세요. 대전에서 쇼핑몰을 준비 중이신가요? 엑스포과학공원 근처에서 커피 한 잔 하며 이야기를 나누듯 편하게 접근해 보세요. 우리는 '대전 쇼핑몰 제작 전문'을 표방하지만, 사실은 <strong>당신의 고민을 해결해주는 파트너</strong>입니다.</p>
+                    <p>대전의 젊은 감각과 글로벌 트렌드를 결합한 디자인이 필요합니다. 평범한 템플릿은 이제 지루합니다. 우리는 스트리트 감성의 브루탈리즘 디자인으로, 방문자가 들어오자마자 "오, 여기 뭔가 다르네?"라고 외치게 만듭니다.</p>
+                    
+                    <div class="card" style="margin-top: 30px; border-left: 5px solid var(--accent-pink);">
+                        <h3>로컬 비즈니스를 위한 전략</h3>
+                        <p>대전의 지리적 특성과 타겟 고객층을 분석하여, 단순한 노출을 넘어 실제 구매 전환 (Conversion) 이 일어나는 구조를 설계합니다. 스마트스토어 연동부터 자체 호스팅까지, 당신의 규모에 딱 맞는 솔루션을 제안합니다.</p>
+                    </div>
+                </article>
 
-    <section class="content-section" style="text-align: center;">
-        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">지금 바로 시작하세요.</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 30px;">
-            망설이는 동안 경쟁자는 이미 매출을 올리고 있습니다.<br>
-            대전 쇼핑몰 제작, 실패 없는 선택을 원하신다면 언제든 연락주세요. 커피 한 잔 사드리겠습니다.
-        </p>
-        <a href="tel:010-6279-0862" class="cta-button">무료 상담 신청하기 (010-6279-0862)</a>
-    </section>
+                <aside>
+                    <div class="card" style="background: var(--text-main); color: var(--bg-color);">
+                        <h3>Quick Info</h3>
+                        <ul style="list-style: square; padding-left: 20px; margin-top: 15px;">
+                            <li style="margin-bottom: 10px;"><strong>Area:</strong> 대전 전역 (유성구, 서구 등)</li>
+                            <li style="margin-bottom: 10px;"><strong>Focus:</strong> 퍼포먼스 & 디자인</li>
+                            <li style="margin-bottom: 10px;"><strong>Stack:</strong> React, Node.js, Shopify</li>
+                            <li><strong>Status:</strong> 현재 예약 가능</li>
+                        </ul>
+                        <br>
+                        <p style="font-size: 0.9rem;">"예쁜 건 기본입니다. 중요한 건 팔리는 거죠."</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
 
-    <footer class="footer">
-        <p>&copy; 2024 대전 쇼핑몰 제작 전문. All rights reserved.</p>
-        <p>Location: Daejeon, South Korea | Tel: 010-6279-0862</p>
-    </footer>
-</div>
+        <!-- Service Grid -->
+        <section style="margin-top: 100px;">
+            <h2>우리가 하는 일</h2>
+            <div class="grid grid-3" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="card">
+                    <h3>01. 커스텀 디자인</h3>
+                    <p>기성 템플릿의 한계를 넘어서세요. 브랜드의 철학을 시각화하여, 경쟁사와는 확실히 다른 UX/UI 를 구현합니다.</p>
+                </div>
+                <div class="card">
+                    <h3>02. 성능 최적화</h3>
+                    <p>로딩 속도 1 초 단축이 매출 10% 상승으로 이어집니다. 이미지 최적화, 코드 압축 등 기술적 디테일에 집착합니다.</p>
+                </div>
+                <div class="card">
+                    <h3>03. 오픈마켓 연동</h3>
+                    <p>스마트스토어, 쿠팡 등 주요 오픈마켓과 재고/주문 연동을 자동화하여 운영의 피로도를 줄여드립니다.</p>
+                </div>
+            </div>
+        </section>
 
+        <!-- FAQ Section -->
+        <section style="margin-top: 100px; margin-bottom: 100px;">
+            <h2>자주 묻는 질문 (FAQ)</h2>
+            <div style="margin-top: 30px;">
+                <div class="faq-item">
+                    <span class="faq-q">Q. 제작 기간은 얼마나 걸리나요?</span>
+                    <p>A. 일반적인 독립몰 기준 3~4 주 정도 소요됩니다. 다만, 디자인의 완성도를 위해 조금 더 시간이 필요할 수도 있습니다. 급하다고 해서 대충 만들진 않습니다.</p>
+                </div>
+                <div class="faq-item">
+                    <span class="faq-q">Q. 유지보수는 어떻게 하나요?</span>
+                    <p>A. 오픈 후 3 개월間は 무상 기간입니다. 그 이후에도 월 정액제 또는 건별 수리로 유연하게 대응해 드립니다. 버그는 우리가 책임집니다.</p>
+                </div>
+                <div class="faq-item">
+                    <span class="faq-q">Q. 대전에서 직접 미팅이 가능한가요?</span>
+                    <p>A.当然了! 대전에 계신다면 언제든 만나서 브리핑 받습니다. 카페든 사무실이든, 편한 곳에서 만나서Detailed 한 이야기를 나누는 게 최고의 시작이죠.</p>
+                </div>
+            </div>
+            <div class="text-right" style="margin-top: 40px;">
+                <a href="#" style="color: var(--accent-green); text-decoration: underline;">더 많은 질문 보기 &rarr;</a>
+            </div>
+        </section>
+
+        <!-- Footer / Contact -->
+        <footer id="contact" style="border-top: 4px solid var(--text-main); padding-top: 50px; margin-bottom: 50px;">
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+                <div>
+                    <h3 style="font-size: 2rem;">작업 문의</h3>
+                    <p>지금 바로 당신의 아이디어를 현실로 만드세요.<br>망설이지 말고 연락주세요.</p>
+                    <a href="tel:042-000-0000" class="btn" style="margin-top: 20px;">042-000-0000</a>
+                </div>
+                <div>
+                    <p><strong>EMAIL:</strong> contact@daejeon-shop.kr</p>
+                    <p><strong>OFFICE:</strong> 대전광역시 유성구 테크노밸리</p>
+                    <p><strong>HOURS:</strong> MON - FRI / 09:00 - 18:00</p>
+                </div>
+                <div class="text-right">
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">
+                        &copy; 2024 Daejeon Shop Maker.<br>
+                        All Rights Reserved.<br>
 </body>
 </html>
