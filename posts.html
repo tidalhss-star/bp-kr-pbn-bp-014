@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · kr-pbn-bp-014</title>
+  <meta name="description" content="kr-pbn-bp-014에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://daejeon-web-builder.pbn-builder.xyz/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* CORE RESET & VARIABLES */
+ :root {
+ --bg-color: #0a0a0a;
+ --text-main: #f0f0f0;
+ --text-muted: #888;
+ --accent-green: #39ff14;
+ --accent-pink: #ff0090;
+ --border-color: #333;
+ --grid-line: rgba(255, 255, 255, 0.05);
+ --font-display: 'Impact', 'Arial Black', sans-serif;
+ --font-body: 'Courier New', monospace;
+ }
+
+ * {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+
+ html, body {
+ background-color: var(--bg-color);
+ color: var(--text-main);
+ font-family: var(--font-body);
+ line-height: 1.6;
+ overflow-x: hidden;
+ }
+
+ a {
+ color: var(--text-main);
+ text-decoration: none;
+ transition: color 0.2s;
+ }
+
+ a:hover {
+ color: var(--accent-green);
+ text-decoration: underline;
+ text-decoration-thickness: 2px;
+ }
+
+ /* TYPOGRAPHY */
+ h1, h2, h3, h4, h5, h6 {
+ font-family: var(--font-display);
+ text-transform: uppercase;
+ letter-spacing: -1px;
+ line-height: 1.1;
+ }
+
+ h1 {
+ font-size: clamp(3rem, 10vw, 8rem);
+ color: var(--text-main);
+ text-shadow: 4px 4px 0px var(--accent-pink);
+ margin-bottom: 20px;
+ }
+
+ h2 {
+ font-size: clamp(2rem, 5vw, 4rem);
+ border-bottom: 4px solid var(--accent-green);
+ display: inline-block;
+ margin-bottom: 30px;
+ }
+
+ h3 {
+ font-size: 1.5rem;
+ margin-bottom: 15px;
+ color: var(--accent-green);
+ }
+
+ p {
+ margin-bottom: 20px;
+ font-size: 1.1rem;
+ max-width: 65ch;
+ }
+
+ /* UTILITIES */
+ .highlight {
+ background-color: var(--accent-green);
+ color: var(--bg-color);
+ padding: 2px 5px;
+ font-weight: bold;
+ }
+
+ .text-right {
+ text-align: right;
+ }
+
+ .flex {
+ display: flex;
+ flex-wrap: wrap;
+ }
+
+ .grid {
+ display: grid;
+ gap: 20px;
+ }
+
+ .container {
+ width: 100%;
+ max-width: 1400px;
+ margin: 0 auto;
+ padding: 20px;
+ border-left: 1px solid var(--border-color);
+ border-right: 1px solid var(--border-color);
+ background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
+ linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+ background-size: 40px 40px;
+ min-height: 100vh;
+ }
+
+ /* COMPONENTS */
+ .btn {
+ display: inline-block;
+ background: transparent;
+ border: 2px solid var(--accent-green);
+ color: var(--accent-green);
+ padding: 15px 30px;
+ font-family: var(--font-display);
+ font-size: 1.2rem;
+ cursor: pointer;
+ text-transform: uppercase;
+ transition: all 0.3s;
+ }
+
+ .btn:hover {
+ background: var(--accent-green);
+ color: var(--bg-color);
+ box-shadow: 5px 5px 0px var(--text-main);
+ transform: translate(-2px, -2px);
+ text-decoration: none;
+ }
+
+ .card {
+ border: 2px solid var(--border-color);
+ padding: 30px;
+ background: rgba(0,0,0,0.8);
+ transition: transform 0.2s;
+ }
+
+ .card:hover {
+ border-color: var(--accent-pink);
+ transform: scale(1.02);
+ }
+
+ .marquee {
+ overflow: hidden;
+ white-space: nowrap;
+ background: var(--accent-pink);
+ color: var(--bg-color);
+ padding: 10px 0;
+ font-family: var(--font-display);
+ font-size: 1.5rem;
+ margin-bottom: 40px;
+ }
+
+ /* NAVIGATION */
+ nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 20px 0;
+ border-bottom: 2px solid var(--text-main);
+ margin-bottom: 50px;
+ }
+
+ .logo {
+ font-family: var(--font-display);
+ font-size: 2rem;
+ font-style: italic;
+ }
+
+ .nav-links {
+ display: flex;
+ gap: 20px;
+ }
+
+ .hamburger {
+ display: none;
+ font-size: 2rem;
+ cursor: pointer;
+ }
+
+ /* FAQ STYLE */
+ .faq-item {
+ border-bottom: 1px solid var(--border-color);
+ padding: 20px 0;
+ }
+ .faq-q {
+ font-weight: bold;
+ color: var(--accent-pink);
+ margin-bottom: 10px;
+ display: block;
+ }
+
+ /* RESPONSIVE */
+ @media (max-width: 768px) {
+ .nav-links {
+ display: none;
+ flex-direction: column;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ width: 100%;
+ background: var(--bg-color);
+ border-bottom: 2px solid var(--accent-green);
+ padding: 20px;
+ }
+ .nav-links.active {
+ display: flex;
+ }
+ .hamburger {
+ display: block;
+ }
+ h1 {
+ text-shadow: 2px 2px 0px var(--accent-pink);
+ }
+ .grid-3 {
+ grid-template-columns: 1fr;
+ }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (1/2) · kr-pbn-bp-014">
+  <meta property="og:description" content="kr-pbn-bp-014에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://daejeon-web-builder.pbn-builder.xyz/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header style="padding: 50px 0;">
+ <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap;">
+ <div>
+ <p style="color: var(--accent-pink); font-weight: bold;">// REGION: DAEJEON</p>
+ <h1>대전의 밤을<br>새우며 만드는<br><span style="color: var(--accent-green)">팔리는 쇼핑몰</span></h1>
+ </div>
+ <div class="text-right">
+ <p>단순 코딩이 아님.<br>당신의 브랜드를 입히는<br>디지털 아트워크.</p>
+ <br>
+ <a href="#contact" class="btn">무료 견적 받기</a>
+ </div>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 31개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-1134.html">대전 쇼핑몰 제작 전문 선택 전에 보는 마포/합정 인디 소셜 라운지 가이드 체크포인트</a>
+        <p class="post-item__summary">대전에서 대전 쇼핑몰 제작 전문를 찾는 사람은 대체로 빠른 결론을 원하지만, 빠른 결론이 항상 좋은 선택은 아닙니다. 비슷한 페이지라도 설명의 순서와 근거가 다르면 신뢰도는 달라집니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0031.html">대전 쇼핑몰 제작 전문 업체가 알려주는 서울 풋쌤 동대문점 이용 전 예약 절차 안내</a>
+        <p class="post-item__summary">많은 고객이 마사지 샵을 예약할 때 가장 자주 실패하는 지점은 정보의 파편화입니다. 대전 쇼핑몰 제작 전문 업체를 통해 비즈니스 시스템을 구축하는 과정과 마찬가지로 마사지 예약 또한 표준화된 절차를</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0032.html">대전 쇼핑몰 제작 전문 노하우로 본 마포 럭셔리 단체 가라오케 예약 가이드 확인 요소</a>
+        <p class="post-item__summary">대전 쇼핑몰 제작 전문 기업이 기획 시 가장 먼저 챙기는 것은 사용자 접근성과 편의성입니다. 이는 대규모 인원이 함께 이동해야 하는 마포 지역의 모임 장소를 섭외할 때도 동일하게 적용되는 필수 확인</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0033.html">대전 쇼핑몰 제작 전문 업체가 알려주는 정보 페이지</a>
+        <p class="post-item__summary">최근 쇼핑몰 운영자들은 갑작스러운 검색 순위 하락을 경험하며 당혹감을 감추지 못하고 있습니다. 마치 머리카락이 빠지듯 웹사이트의 도메인 지수가 서서히 하락하는 현상은 적절한 대응이 없다면 치명적인 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0034.html">대전 쇼핑몰 제작 전문 팀이 전하는 상세 안내 운영 원리</a>
+        <p class="post-item__summary">많은 분이 검색엔진의 알고리즘 변경이 일어날 때마다 사이트가 영구적으로 불이익을 받는다고 지레짐작하며 포기하곤 합니다. 하지만 대전 쇼핑몰 제작 전문 팀이 관찰한 바로는 이는 단순한 감점일 뿐 치료</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0035.html">대전 쇼핑몰 제작 전문 솔루션의 구글 봇 정밀 검진 및 크롤 버짓 밀착 간호 서비스</a>
+        <p class="post-item__summary">쇼핑몰이 검색 결과에 잘 노출되기 위해서는 검색 봇이 사이트 내부를 얼마나 효율적으로 탐색하느냐가 핵심입니다. 대전 쇼핑몰 제작 전문 기업들은 충족 조건을 먼저 나열하고 그에 맞춰 사이트 구조를 재</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0036.html">대전 쇼핑몰 제작 전문 지식으로 살펴보는 마포 코인노래방 방음 시설 비교 가이드</a>
+        <p class="post-item__summary">혹시 창업을 앞두고 방음 시설이 완벽한 곳을 찾기 위해 고민하고 계신가요? 대전 쇼핑몰 제작 전문 지식을 보유한 전문가들이 보기에도 마포 지역의 코인노래방들은 방음 기술에 따라 고객의 만족도가 극명</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0037.html">대전 쇼핑몰 제작 전문 업체를 활용한 마포 셔츠룸 예약 시 눈탱이 피하는 법</a>
+        <p class="post-item__summary">디지털 환경에서 신뢰도 높은 정보를 선별하는 방식은 대전 쇼핑몰 제작 전문 기업이 데이터를 검증하는 절차와 놀랍도록 유사합니다. 온라인상에 범람하는 마케팅 게시물 속에서 옥석을 가려내는 안목은 소비</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0038.html">대전 쇼핑몰 제작 전문 기업의 관점에서 본 셔츠룸 예약 및 셔츠룸 선택 가이드</a>
+        <p class="post-item__summary">대전 쇼핑몰 제작 전문 분야에서 최적의 인터페이스를 구축하는 것과 셔츠룸을 선택하는 과정에는 비슷한 원리가 숨어 있습니다. 고객의 경험을 우선시하는 사용자 중심 설계가 웹 서비스의 핵심이듯, 유흥 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0039.html">대전 쇼핑몰 제작 전문 업체가 조언하는 마포 홍대 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">디지털 솔루션 설계 분야인 대전 쇼핑몰 제작 전문 영역에서는 프로젝트 초기에 기획 실패 지점을 먼저 파악하는 것이 관례입니다. 이와 마찬가지로 단체 가라오케 이용 시 가장 흔히 발생하는 실패는 인원</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0040.html">대전 쇼핑몰 제작 전문 분석팀의 구글 틈새 키워드 트래픽 외환 거래 전략 활용법</a>
+        <p class="post-item__summary">대전 쇼핑몰 제작 전문팀이 데이터를 분석할 때 가장 중요하게 여기는 요소는 트래픽의 유입 경로와 그에 따른 효율성 측정입니다. 이는 외환 거래 전략을 수립할 때 특정 키워드를 활용해 시장의 흐름을 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0041.html">대전 쇼핑몰 제작 전문 업체가 알려주는 구글 알고리즘 고신용 도메인 보증 카드 발급 절차</a>
+        <p class="post-item__summary">최근 신규 쇼핑몰을 구축한 운영자가 도메인 지수 하락으로 인해 검색 노출에 어려움을 겪는 사례가 늘고 있습니다. 단순히 예쁜 웹사이트를 만드는 것만으로는 구글 검색 알고리즘의 신뢰를 얻기 부족한 시</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0042.html">대전 쇼핑몰 제작 전문 팀이 분석한 마포 단체 회식용 대형 룸 노래방 가격 정보 및 비즈니스 회식 매칭</a>
+        <p class="post-item__summary">흔히 대형 룸은 무조건 비싸고 서비스 질이 낮을 것이라는 오해를 하곤 합니다. 하지만 마포 지역의 비즈니스 회식 환경을 살펴보면, 효율적인 예약 시스템을 갖춘 곳은 오히려 합리적인 가격 구조를 제시</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0043.html">대전 쇼핑몰 제작 전문 기술로 알아본 마포 셔츠룸 리얼 후기 소셜 마케팅 가이드 및 페르소나 최적화</a>
+        <p class="post-item__summary">성공적인 소셜 마케팅은 명확한 타겟팅과 사용자 중심의 콘텐츠에서 시작됩니다. 마포 지역의 특정 업종은 방문객의 인원 구성에 따라 최적화된 마케팅 전략을 달리해야 합니다. 페르소나를 정밀하게 분석하여</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0044.html">대전 쇼핑몰 제작 전문 시각으로 보는 마포 홍대 로컬 럭셔리 밤문화 가이드 및 소셜 밤문화 매개체</a>
+        <p class="post-item__summary">여러분은 밤문화를 즐길 때 어떤 기준으로 업체를 선택하시나요? 단순히 분위기가 좋다는 말만 믿고 방문했다가 실망한 경험은 누구에게나 한 번쯤 있을 것입니다. 홍대와 마포 일대의 숨겨진 럭셔리한 공간</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0045.html">대전 쇼핑몰 제작 전문 업체가 제안하는 구글 신뢰 지수 모발이식 솔루션 분석</a>
+        <p class="post-item__summary">대전 쇼핑몰 제작 전문 기술은 단순히 웹사이트를 구축하는 범위를 넘어 검색 엔진이 데이터를 인식하는 방식을 최적화하는 데 집중합니다. 웹의 구조가 정교할수록 검색 로봇은 사이트의 신뢰 지수를 높게 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0023.html">대전 쇼핑몰 제작 전문 업체 활용법과 연남 클럽 추천정보 예약 절차</a>
+        <p class="post-item__summary">대전 쇼핑몰 제작 전문 업체를 찾다가 원하는 방향과 다른 결과물에 실망하는 사례가 종종 발생합니다. 이처럼 목표가 불분명할 때 실패의 확률이 높아지는 현상은 연남 클럽을 방문할 때의 예약 단계에서도</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0024.html">대전 쇼핑몰 제작 전문 상담 기준을 적용한 합정 셔츠룸 추천정보 체크리스트</a>
+        <p class="post-item__summary">대전 쇼핑몰 제작 전문 상담을 진행할 때 기술력과 사후 관리를 철저히 따지는 것과 마찬가지로 합정 셔츠룸을 방문할 때도 명확한 체크리스트가 필요합니다. 무작정 방문했다가 낭패를 보기보다는 사전 정보</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0025.html">대전 쇼핑몰 제작 전문 업체가 알려주는 공덕 가라오케 추천정보</a>
+        <p class="post-item__summary">오랜 기간 대전 쇼핑몰 제작 전문 서비스를 운영하며 얻은 경험으로 볼 때, 비즈니스 목적의 모임 장소를 선정하는 과정은 웹사이트 구조를 설계하는 것과 매우 유사한 정교함을 요구합니다. 특히 처음 방</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0026.html">대전 쇼핑몰 제작 전문 팀이 제안하는 상수 마사지 추천정보</a>
+        <p class="post-item__summary">많은 분이 관리 시설은 언제 방문해도 서비스 품질이 동일할 것이라고 오해합니다. 하지만 대전 쇼핑몰 제작 전문 실무자로서 말씀드리면, 모든 서비스업은 트래픽이 몰리는 시간대와 한산한 시간대에 따라 </p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
